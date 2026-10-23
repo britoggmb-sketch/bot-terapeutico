@@ -42,7 +42,7 @@ user_sessions = {}
 def get_chat(chat_id):
     if chat_id not in user_sessions:
         model = genai.GenerativeModel(
-            model_name="gemini-2.0-flash",
+            model_name="gemini-3.8-flash",
             system_instruction=SYSTEM_PROMPT
         )
         user_sessions[chat_id] = model.start_chat(history=[])
